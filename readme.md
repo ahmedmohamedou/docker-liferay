@@ -6,4 +6,4 @@ To build and run:
 
 `docker build -t liferay .`
 
-`docker run -it -P -e DB_HOST=<mysql-db-host> -e DB_USER=<mysql-db-user> -e DB_PASS=<mysql-user-pass> -e DB_NAME=<mysql-db-name> liferay`
+`docker run -it -P -e DB_HOST=<mysql-db-host> -e DB_PORT=<mysql-db-port> -e DB_USER=<mysql-db-user> -e DB_PASS=<mysql-user-pass> -e DB_NAME=<mysql-db-name> liferay`

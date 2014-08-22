@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV JAVA_HOME /opt/jdk/jre
 ENV PATH $PATH:/opt/jdk/jre/bin
 ENV LIFERAY_HOME /opt/liferay-portal-6.2-ce-ga2
-ENV CATALINA_OPTS -Dfile.encoding=UTF8 -Djava.net.preferIPv4Stack=true -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false -Duser.timezone=GMT -Xmx1024m -XX:MaxPermSize=256m -Dexternal-properties=portal-db.properties -Ddb_host=$DB_HOST -Ddb_user=$DB_USER -Ddb_pass=$DB_PASS -Ddb_name=$DB_NAME
+ENV CATALINA_OPTS -Dfile.encoding=UTF8 -Djava.net.preferIPv4Stack=true -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false -Duser.timezone=GMT -Xmx1024m -XX:MaxPermSize=256m -Dexternal-properties=portal-db.properties -Ddb_host=$DB_HOST -Ddb_port=$DB_PORT -Ddb_user=$DB_USER -Ddb_pass=$DB_PASS -Ddb_name=$DB_NAME
 RUN apt-get update && \
     apt-get install -y wget unzip
 RUN (cd /tmp && wget --progress=dot --no-check-certificate -O jdk.tar.gz --header "Cookie: oraclelicense=a" http://download.oracle.com/otn-pub/java/jdk/7u65-b17/jdk-7u65-linux-x64.tar.gz && \
