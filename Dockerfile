@@ -17,5 +17,5 @@ RUN (cd /tmp && \
 ADD conf/portal-bundle.properties $LIFERAY_HOME/portal-bundle.properties
 ADD conf/portal-db.properties $LIFERAY_HOME/portal-db.properties
 EXPOSE 8080
-ENTRYPOINT ["$LIFERAY_HOME/tomcat-7.0.42/bin/catalina.sh"]
+ENTRYPOINT ["/opt/liferay-portal-6.2-ce-ga2/tomcat-7.0.42/bin/catalina.sh"]
 CMD ["run"]
